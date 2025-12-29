@@ -25,6 +25,16 @@ Concise, expert-level refreshers on core backend concepts. These are not textboo
 - **Queues**: Asynchronous processing patterns.
 - **API Design**: Idempotency, versioning, and contracts.
 - **[Terminology Guide](./fundamentals/system-design-terminology-guide.md)**: A plain-english glossary for self-taught developers.
+- **API Design**: Idempotency, versioning, and contracts.
+- **[Terminology Guide](./fundamentals/system-design-terminology-guide.md)**: A plain-english glossary for self-taught developers.
+
+### 🌐 Networking & DevOps
+- **[Networking Basics](./fundamentals/networking-basics.md)**: IPs, Ports, TCP/UDP, and the Request Lifecycle.
+- **[DNS Explained](./fundamentals/dns-explained.md)**: How domain names work in production.
+- **[Load Balancing](./fundamentals/load-balancing.md)**: L4/L7 LB, Algorithms, and Reverse Proxies.
+- **[Containers & K8s](./fundamentals/containers-and-kubernetes.md)**: Docker and Orchestration basics.
+- **[CI/CD Pipelines](./fundamentals/ci-cd-pipelines.md)**: Deployment strategies (Blue-Green, Canary).
+- **[Observability](./fundamentals/observability.md)**: Logs, Metrics, and Distributed Tracing.
 
 ### 📂 [Case Studies](./case-studies)
 Deep dives into five realistic storage-heavy and compute-heavy systems. Each case study follows a strict, standardized structure:
