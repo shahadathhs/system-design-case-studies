@@ -3,8 +3,6 @@
 ## Purpose
 This repository serves as a **comprehensive system design portfolio**, demonstrating the architectural decision-making process for high-scale, distributed systems. It is not just a collection of diagrams, but a detailed documentation of the **"why"** behind technical choices.
 
-It is written from the perspective of a **Senior/Staff Backend Engineer** comfortable with the Node.js/NestJS/PostgreSQL ecosystem, targeting remote roles in the US, EU, and Canada.
-
 ## Target Audience
 - **Interviewers**: To evaluate system design thinking, trade-off analysis, and production-readiness without needing to parse thousands of lines of code.
 - **Engineers**: As a reference for practical, production-grade architecture patterns.
@@ -26,6 +24,7 @@ Concise, expert-level refreshers on core backend concepts. These are not textboo
 - **Caching**: Strategies beyond "just cache it" (invalidation, thundering herds).
 - **Queues**: Asynchronous processing patterns.
 - **API Design**: Idempotency, versioning, and contracts.
+- **[Terminology Guide](./fundamentals/system-design-terminology-guide.md)**: A plain-english glossary for self-taught developers.
 
 ### 📂 [Case Studies](./case-studies)
 Deep dives into five realistic storage-heavy and compute-heavy systems. Each case study follows a strict, standardized structure:
@@ -49,6 +48,3 @@ Each system is documented with:
 
 ### 📂 [Diagrams](./diagrams)
 Visual aids supporting the written designs, including flowcharts, sequence diagrams, and architecture maps.
-
-## Author Note
-I am a self-taught backend engineer with a deep focus on **Node.js, NestJS, and PostgreSQL**. My expertise lies in building resilient, scalable backends. This repository is a reflection of my learnings from real-world engineering challenges and continuous study of distributed systems.
