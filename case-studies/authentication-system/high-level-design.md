@@ -30,15 +30,6 @@ We use a **Microservice Architecture** where the Auth Service is a standalone co
 - **Stateful Verification (Start of session)**: Usually handled at the Gateway level for critical operations. Checks Redis to ensure the user hasn't been banned.
 
 ## Diagram
-```mermaid
-graph TD
-    User[User Client] -->|HTTPS| Gateway[API Gateway]
-    Gateway -->|/auth/login| AuthSvc[Auth Service]
-    Gateway -->|/api/orders| OrderSvc[Order Service]
-    
-    AuthSvc -->|Read/Write| DB[(Postgres DB)]
-    AuthSvc -->|Cache Sessions| Redis[(Redis Cache)]
-    
-    OrderSvc -.->|Verify Signature| AuthLib[Public Key Lib]
-    AuthLib -.->|Fetch Keys| AuthSvc
-```
+
+[Link to Diagram](../../diagrams/authentication-system.md)
+
