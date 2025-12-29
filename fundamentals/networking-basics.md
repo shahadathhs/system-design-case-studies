@@ -1,7 +1,7 @@
 # Networking Basics for Backend Engineers
 
 ## 1. The Core Concepts
-At its heart, "Networking" is just computers passing notes to each other. As a backend engineer, you don't need to know physics of fiber optics. You need to know how data gets from a user's phone to your Node.js endpoint.
+At its heart, networking is data transmission between nodes. For backend engineering, the focus lies on the application layer protocols and transport mechanisms that deliver data to the API endpoints.
 
 ### IP Addresses (The House Address)
 *   **Public IP**: The external address. Unique across the entire internet.
@@ -47,7 +47,7 @@ An IP address gets you to the machine. A **Port** gets you to the specific appli
 
 ---
 
-## 3. The Lifecycle of a Request (Interview Gold)
+## 3. The Lifecycle of a Request
 "What happens when you type `google.com` and hit enter?"
 
 1.  **DNS Lookup**: Browser asks DNS "Where is `google.com`?" -> Gets IP `1.2.3.4`.

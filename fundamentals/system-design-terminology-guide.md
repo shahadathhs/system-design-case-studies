@@ -1,5 +1,5 @@
 # System Design Terminology Guide
-*A Plain-English Guide for Self-Taught Backend Developers*
+*A Practical Reference for Backend Engineers*
 
 ## 1. What Is System Design (In Simple Terms)
 **System Design** is simply "Architecture planning."

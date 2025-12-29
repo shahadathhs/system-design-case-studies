@@ -20,7 +20,7 @@
 When you have 1 container, you use Docker Run.
 When you have 500 containers working together, you use Kubernetes.
 
-### Core K8s Objects (For Backend Devs)
+### Core K8s Objects
 
 #### 1. Pod
 The smallest unit. Usually contains **1 Container** (e.g., your API).
