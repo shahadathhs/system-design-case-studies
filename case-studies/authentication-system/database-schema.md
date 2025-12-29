@@ -1,16 +1,20 @@
 # Database Schema
 
 ## Technology
-*   **Primary DB**: PostgreSQL 15.
-*   **Session store**: Redis (Cluster mode).
+
+- **Primary DB**: PostgreSQL 15.
+- **Session store**: Redis (Cluster mode).
 
 ## Entity Relationship Diagram (ERD)
-*Not rendered here, but describes links between Users, Roles, and Devices.*
+
+_Not rendered here, but describes links between Users, Roles, and Devices._
 
 ## Tables
 
 ### 1. `users`
+
 Core identity table.
+
 ```sql
 CREATE TABLE users (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -26,7 +30,9 @@ CREATE TABLE users (
 ```
 
 ### 2. `auth_providers` (OAuth)
+
 Links users to external providers (Google, GitHub).
+
 ```sql
 CREATE TABLE auth_providers (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -39,7 +45,9 @@ CREATE TABLE auth_providers (
 ```
 
 ### 3. `refresh_token_families` (Reuse Detection)
+
 Instead of storing the raw token, we track the conceptual "session" chain.
+
 ```sql
 CREATE TABLE sessions (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -54,10 +62,13 @@ CREATE TABLE sessions (
 ```
 
 ### Redis Schema
+
 Used for rapid validation and blacklisting.
-*   **Key**: `blacklist:jti:{token_jti}` -> `true` (TTL: remaining token lifetime).
-*   **Key**: `session:{user_id}:{device_id}` -> JSON (Cached session metadata).
+
+- **Key**: `blacklist:jti:{token_jti}` -> `true` (TTL: remaining token lifetime).
+- **Key**: `session:{user_id}:{device_id}` -> JSON (Cached session metadata).
 
 ## Why this Schema?
+
 1.  **Separation of OAuth**: Allows a single user to link multiple social accounts.
 2.  **Sessions vs Tokens**: We track `sessions` in PG to allow "View Active Devices" features in the UI.

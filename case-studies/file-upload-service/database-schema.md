@@ -3,7 +3,9 @@
 ## Tables
 
 ### 1. `media_assets`
+
 Tracks the lifecycle of a file.
+
 ```sql
 CREATE TABLE media_assets (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -13,19 +15,21 @@ CREATE TABLE media_assets (
     s3_bucket VARCHAR(100),
     mime_type VARCHAR(50),
     size_bytes BIGINT,
-    
+
     status VARCHAR(20), -- 'UPLOADING', 'PROCESSING', 'READY', 'FAILED', 'INFECTED'
-    
-    variants JSONB, 
+
+    variants JSONB,
     -- { "thumb": "processed/uuid-thumb.webp", "medium": "..." }
-    
+
     created_at TIMESTAMPTZ DEFAULT NOW(),
     updated_at TIMESTAMPTZ
 );
 ```
 
 ### 2. `upload_quotas`
+
 Prevent abuse.
+
 ```sql
 CREATE TABLE upload_quotas (
     user_id UUID PRIMARY KEY,
@@ -35,4 +39,5 @@ CREATE TABLE upload_quotas (
 ```
 
 ## JSONB Usage
+
 We use `variants JSONB` because the number of image sizes might change over time. It allows flexibility without `ALTER TABLE` every time we decide to add a "XXL" size.

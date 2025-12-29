@@ -1,13 +1,16 @@
 # Database Schema
 
 ## Tech Stack
-*   **PostgreSQL**: Reliability for logs and templates.
-*   **MongoDB**: (Optional) For archiving massive historical logs if PG partitioning gets unwieldy. We will stick to partitioned PG for simplicity.
+
+- **PostgreSQL**: Reliability for logs and templates.
+- **MongoDB**: (Optional) For archiving massive historical logs if PG partitioning gets unwieldy. We will stick to partitioned PG for simplicity.
 
 ## Tables
 
 ### 1. `notification_templates`
+
 Manages the content.
+
 ```sql
 CREATE TABLE notification_templates (
     id SERIAL PRIMARY KEY,
@@ -20,8 +23,10 @@ CREATE TABLE notification_templates (
 ```
 
 ### 2. `notification_logs` (Partitioned)
+
 The source of truth for "Did user X get the message?".
 **Partitioning**: By Month.
+
 ```sql
 CREATE TABLE notification_logs (
     id UUID PRIMARY KEY,
@@ -37,6 +42,7 @@ CREATE TABLE notification_logs (
 ```
 
 ### 3. `user_preferences`
+
 ```sql
 CREATE TABLE user_preferences (
     user_id UUID,
@@ -48,5 +54,6 @@ CREATE TABLE user_preferences (
 ```
 
 ## Indexes
-*   `idx_logs_user` on `notification_logs(user_id)`: To show "My Activity" to users.
-*   `idx_logs_status` on `notification_logs(status)`: For finding stuck messages.
+
+- `idx_logs_user` on `notification_logs(user_id)`: To show "My Activity" to users.
+- `idx_logs_status` on `notification_logs(status)`: For finding stuck messages.

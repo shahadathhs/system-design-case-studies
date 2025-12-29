@@ -1,6 +1,7 @@
 # Requirements
 
 ## Functional Requirements
+
 1.  **Multi-Channel**: Support Email, SMS, Push, In-App.
 2.  **Templates**: Dynamic content insertion ("Hello {{first_name}}").
 3.  **Preferences**: Users can opt-out of specific channels or categories (e.g., "No Marketing SMS").
@@ -10,6 +11,7 @@
 7.  **Rate Limiting**: Prevent spamming a single user inadvertently.
 
 ## Non-Functional Requirements
+
 1.  **Reliability**: At-least-once delivery. Don't lose OTPs.
 2.  **Scalability**: Handle "Fan-out" (Sending to 1 Million users at once) without crashing.
 3.  **Extensibility**: Easy to add new providers (e.g., Slack, WhatsApp).

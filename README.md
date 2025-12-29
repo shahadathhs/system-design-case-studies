@@ -5,7 +5,9 @@ A collection of detailed architectural case studies and operational guides for h
 ## Repository Structure
 
 ### 📂 [Fundamentals](./fundamentals)
-Concise, expert-level refreshers on core backend concepts. These guides focus on *applying* these concepts in production.
+
+Concise, expert-level refreshers on core backend concepts. These guides focus on _applying_ these concepts in production.
+
 - **Scalability**: Horizontal vs. Vertical, Statelessness.
 - **Consistency**: CAP theorem in practice, Eventual Consistency patterns.
 - **Storage**: SQL vs. NoSQL decision frameworks.
@@ -17,6 +19,7 @@ Concise, expert-level refreshers on core backend concepts. These guides focus on
 - **[Interview Playbook](./fundamentals/system-design-interview-playbook.md)**: A 7-step framework for system design discussions.
 
 ### 🌐 Networking & DevOps
+
 - **[Networking Basics](./fundamentals/networking-basics.md)**: IPs, Ports, TCP/UDP, and the Request Lifecycle.
 - **[DNS Explained](./fundamentals/dns-explained.md)**: How domain names work in production.
 - **[Load Balancing](./fundamentals/load-balancing.md)**: L4/L7 LB, Algorithms, and Reverse Proxies.
@@ -25,6 +28,7 @@ Concise, expert-level refreshers on core backend concepts. These guides focus on
 - **[Observability](./fundamentals/observability.md)**: Logs, Metrics, and Distributed Tracing.
 
 ### 📂 [Case Studies](./case-studies)
+
 Deep dives into five realistic storage-heavy and compute-heavy systems. Each case study follows a strict, standardized structure:
 
 1.  **[Authentication System](./case-studies/authentication-system)**: Secure, scalable identity management (JWT, OAuth, Token Rotation).
@@ -34,10 +38,13 @@ Deep dives into five realistic storage-heavy and compute-heavy systems. Each cas
 5.  **[Analytics Pipeline](./case-studies/analytics-event-pipeline)**: Big data ingestion and processing (Buffering, Batching, Data Lakes).
 
 #### Case Study Documentation Format
+
 Each system is documented with:
+
 - `requirements.md`: Functional & non-functional scoping.
 - `high-level-design.md`: Architecture overview and data flow.
 - `trade-offs.md`: Critical analysis of alternatives rejected.
 
 ### 📂 [Diagrams](./diagrams)
+
 Visual aids supporting the written designs, including flowcharts, sequence diagrams, and architecture maps.

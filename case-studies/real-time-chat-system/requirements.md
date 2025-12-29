@@ -1,6 +1,7 @@
 # Requirements
 
 ## Functional Requirements
+
 1.  **1:1 Chat**: Private messaging.
 2.  **Group Chat**: Up to 100 members.
 3.  **Presence**: Online/Offline/Typing indicators.
@@ -9,6 +10,7 @@
 6.  **Push Notifications**: Notify if the user is offline.
 
 ## Non-Functional Requirements
+
 1.  **Low Latency**: Real-time feel (< 100ms internal processing).
 2.  **Ordering**: Messages must appear in the strict order they were sent.
 3.  **Consistency**: No lost messages. (At-least-once delivery).
